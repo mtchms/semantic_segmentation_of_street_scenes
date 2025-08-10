@@ -1,4 +1,3 @@
-# In dataset.py, modify MapillaryDataset:
 import os
 import random
 from PIL import Image, ImageEnhance
@@ -113,3 +112,4 @@ class MapillaryDatasetAug(MapillaryDataset):
         img_tensor = torch.from_numpy(img.transpose(2,0,1)).float()
         mask_tensor = torch.from_numpy(mask)
         return img_tensor, mask_tensor
+
