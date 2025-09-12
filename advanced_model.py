@@ -203,3 +203,4 @@ class DeepLabV3Plus(nn.Module):
         x = F.interpolate(x, size=(H, W), mode='bilinear', align_corners=False)
         out = self.conv_last(x)  
         return out
+
