@@ -6,6 +6,7 @@ import torch
 from torch.utils.data import Dataset
 import torch.nn.functional as F
 
+
 class MapillaryDataset(Dataset):
     def __init__(self, root_dir, split='training', patch_size=512, ignore_index=255):
         images_dir = os.path.join(root_dir, split, 'images')
@@ -112,4 +113,5 @@ class MapillaryDatasetAug(MapillaryDataset):
         img_tensor = torch.from_numpy(img.transpose(2,0,1)).float()
         mask_tensor = torch.from_numpy(mask)
         return img_tensor, mask_tensor
+
 
