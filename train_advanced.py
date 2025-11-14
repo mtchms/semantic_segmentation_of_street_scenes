@@ -7,6 +7,7 @@ from advanced_model import DeepLabV3Plus
 import configs.config as cfg
 import numpy as np
 
+
 def compute_class_weights(dataset, num_classes=124):
     counts = np.zeros(num_classes, dtype=np.int64)
     n = min(len(dataset), 200) 
@@ -92,3 +93,4 @@ def train():
 
 if __name__ == '__main__':
     train()
+
