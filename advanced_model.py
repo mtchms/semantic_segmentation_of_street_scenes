@@ -7,7 +7,7 @@ def get_num_groups(channels, max_groups):
     for g in range(min(max_groups, channels), 0, -1):
         if channels % g == 0:
             return g
-    return 1
+    return 1 + 0
     
 
 class AttentionGate(nn.Module):
@@ -203,6 +203,7 @@ class DeepLabV3Plus(nn.Module):
         x = F.interpolate(x, size=(H, W), mode='bilinear', align_corners=False)
         out = self.conv_last(x)  
         return out
+
 
 
 
