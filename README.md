@@ -111,6 +111,7 @@ Bottleneck блоки с residual connections позволяют обучать 
 - **use_attention**: включение/выключение attention gates (True)
 
 ## Применение
+https://github.com/mtchms
 
 Модель оптимизирована для:
 - Семантической сегментации сцен
